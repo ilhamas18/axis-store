@@ -1,0 +1,27 @@
+.progressbar-wrapper {
+  .progressbar {
+    position: relative;
+    list-style: none;
+
+    .flex-step {
+      counter-increment: list;
+      display: inline-block;
+      flex-direction: row;
+
+      .progressbar__item {
+        position: relative;
+        background-color: #E2E2E2;
+  
+        &.active {
+          background-color: #6E2C91;
+        }
+  
+        &.current {
+          background-color: #6E2C91;
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,79 @@
+.card-payment-info {
+  @apply relative rounded-2xl w-full p-4 shadow-lg mt-3 border border-[#e2e2e2];
+
+  .content {
+    @apply flex flex-row items-center;
+
+    .image {
+      @apply w-[32px] h-[32px] flex items-center justify-center;
+    }
+  }
+}
+
+.card-payment {
+  @apply relative rounded-2xl w-full p-4 shadow-lg mt-8;
+
+  .content {
+    @apply flex flex-row items-center;
+
+    .image {
+      @apply w-[32px] h-[32px] flex items-center justify-center;
+    }
+  }
+}
+
+.card-courier {
+  @apply relative rounded-2xl w-full p-4 shadow-lg mt-8;
+
+  .content {
+    @apply flex flex-row items-center;
+
+    .image {
+      @apply w-[32px] h-[32px] flex items-center justify-center;
+    }
+  }
+}
+
+.card-bg-quota {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  height: 77px;
+  width: 99px;
+  position: relative;
+  margin-right: 0.5rem;
+  @media (min-width: 768px) {
+    width: 77px;
+  }
+  img {
+    position: absolute;
+    display: block;
+  }
+  .quota-inner {
+    z-index: 3;
+    margin-top: -15px;
+    h5 {
+      margin-bottom: 0;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: #fff;
+      margin-top: 7px;
+      text-transform: uppercase;
+      span {
+        position: absolute;
+        margin-top: -15px;
+        left: 38px;
+        @media (min-width: 768px) {
+          left: 36px;
+        }
+      }
+    }
+  }
+}

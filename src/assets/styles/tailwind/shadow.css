@@ -1,0 +1,4 @@
+.shadow-card {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    @apply rounded-2xl
+}

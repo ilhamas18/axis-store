@@ -1,0 +1,208 @@
+// Color system
+// Version 2.0.0
+
+/* Normal Gray */
+$white: #fff;
+$gray-10: #fcfcfd !default; // Custom Var - XL Prioritas, default: #fcfcfc
+$gray-20: #fafafa !default; // Custom Var - Antikode
+$gray-50: #f6f7f8 !default; // Custom Var - XL Prioritas, default: #f2f2f2
+$gray-70: #f9f9f9 !default; // Custom Var - Antikode
+$gray-100: #e5e5e5; // Custom Var - Antikode
+$gray-200: #d8d8d8; // Custom Var - Xl Prioritas, default: #cccccc
+$gray-300: #b3b3b3; // Custom Var - Antikode
+$gray-400: #a0a0a0; // Custom Var - XL Prioritas, default: #999999
+$gray-500: #808080; // Custom Var - Antikode
+$gray-600: #666666; // Custom Var - Antikode
+$gray-700: #4d4d4d; // Custom Var - Antikode
+$gray-800: #333333; // Custom Var - Antikode - $body-color
+$gray-900: #191919; // Custom Var - Antikode
+$black: #1d1d1d; // Custom Var - XL Prio, default: #000
+$cooper: #d39959; // New Var - XL Prio
+$mustard: #b89124; // New Var - XL Prio
+$gold: #c8af65; // New Var - XL Prio
+$silver: #8c96a2; // New Var - XL Prio
+$medium-yellow: #e49c10; // New Var - XL Prio
+$platinum: #878b88; // New Var - XL Prio
+$diamond: #6689ab; // New Var - XL Prio
+$ultima: #131313; // New Var - XL Prio
+$light-gray: #e2e2e2; // New Var - XL Prio
+$light-red: #f3ced9; // New Var - XL Prio
+$medium-red: #c40d42; // New Var - XL Prio
+$dark-gray: #68788a; // New Var - XL Prio
+
+// background-image var
+$coal: linear-gradient(135deg, #6e6e6e, $black);
+$gold-linear: linear-gradient(135deg, #ffead3, #c68241);
+$gold-radial: radial-gradient(circle at 14% 23%, #ffead3, #c68241 94%);
+
+// gradient
+$silver-header: linear-gradient(45deg, #5a646c 1.09%, #bdd0dc 100%);
+$gold-header: linear-gradient(45deg, #a57013 0%, #e7be45 100%);
+$platinum-header: linear-gradient(227.81deg, #add5e6 -1.21%, #5c808e 96.55%);
+$diamond-header: linear-gradient(225deg, #0c90d5 0%, #275aab 100%);
+$ultima-header: linear-gradient(141.86deg, #6e6e6e -31.39%, #000000 67.51%);
+
+/* Slate Gray */
+// $white:    #fff;
+// $gray-10:  #fcfcfc !default; // Custom Var - Antikode
+// $gray-20:  #fafafa !default; // Custom Var - Antikode
+// $gray-50:  #f1f3f4 !default; // Custom Var - Antikode
+// $gray-70:  #e2e6e9 !default; // Custom Var - Antikode
+// $gray-100: #e9ecee; // Custom Var - Antikode
+// $gray-200: #c8ced5; // Custom Var - Antikode
+// $gray-300: #b2bbc3; // Custom Var - Antikode
+// $gray-400: #9ca7b2; // Custom Var - Antikode
+// $gray-500: #7b8a99; // Custom Var - Antikode
+// $gray-600: #677685; // Custom Var - Antikode
+// $gray-700: #4e5964; // Custom Var - Antikode
+// $gray-800: #343b43; // Custom Var - Antikode - $body-color
+// $gray-900: #1a1e22; // Custom Var - Antikode
+// $black:    #000001;
+
+$grays: (
+  "10": $gray-10,
+  // Custom Var - Antikode
+  "20": $gray-20,
+  // Custom Var - Antikode
+  "50": $gray-50,
+  // Custom Var - Antikode
+  "70": $gray-70,
+  // Custom Var - Antikode
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900,
+  ),
+  $grays
+);
+
+$blue: #007bff !default;
+$blue-twitter: #00acee; // Custom Var - Antikode
+$blue-facebook: #1877f2; // Custom Var - Antikode
+$blue-linkedin: #0077b5; // Custom Var - Antikode
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$golden: #b89124 !default; // Custom Var - XL Prioritas
+$copper: #d39959 !default; // Custom Var - XL Prioritas
+
+$colors: (
+  "golden": $golden,
+  // Custom Var - Antikode
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800,
+  ),
+  $colors
+);
+
+$primary: $golden; // Custom Var - XL Prioritas
+$secondary: $ultima; // Custom Var - XL Prioritas
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-20; // Custom Var - Antikode
+$dark: $gray-900; // Custom Var - Antikode
+
+$theme-colors: (
+  "gray-10": $gray-10,
+  // Custom Var - Antikode
+  "gray-20": $gray-20,
+  // Custom Var - Antikode
+  "gray-50": $gray-50,
+  // Custom Var - Antikode
+  "gray-70": $gray-70,
+  // Custom Var - Antikode
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "black": $black,
+  "white": $white,
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8%;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900;
+$yiq-text-light: $white;
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (("<", "%3c"), (">", "%3e"), ("#", "%23"));
+
+// Body Color
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $ultima; // Custom Var - Antikode
+$body-color-secondary: $gray-400; // Custom Var - Antikode
+
+// Links Color
+//
+// Style anchor elements.
+
+$link-color: theme-color("primary");
+$link-decoration: none;
+// $link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none; // Antikode
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15%;
+
+$btn-hover-bg-darken: 5%; // Antikode (default: 7.5%)
+$btn-hover-border-darken: $btn-hover-bg-darken; // Antikode (default: 10%)
+// $btn-hover-active-bg-darken: 10%; // Antikode
+// $btn-hover-active-border-darken: $btn-hover-active-bg-darken; // Antikode (default: 12.5%)

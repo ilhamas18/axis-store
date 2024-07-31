@@ -1,0 +1,10 @@
+.list-info {
+  @apply flex justify-between py-2;
+}
+
+.list-label {
+  @apply font-Museo-Light text-start text-sm min-w-[100px] md:min-w-[200px] block;
+}
+.list-value {
+  @apply font-Museo-Bold text-sm text-end;
+}

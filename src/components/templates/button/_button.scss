@@ -1,0 +1,88 @@
+.btn {
+  font-weight: 400;
+  height: 44px;
+  color: white;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  &.btn-xl {
+    background-color: #002dbb;
+    border: none;
+
+    &:hover {
+      background-color: #1d4ed8;
+    }
+  }
+
+  &.btn-secondary-xl {
+    background-color: white;
+    border: 1px solid #002dbb;
+    color: #002dbb;
+
+    &:hover {
+      box-shadow:
+        0 0 5px #5ddcff,
+        0 0 10px #002dbb;
+    }
+  }
+
+  &.btn-secondary-axis {
+    background-color: white;
+    border: 1px solid #753C94;
+    color: #753C94;
+
+    &:hover {
+      box-shadow:
+        0 0 5px #5ddcff,
+        0 0 10px #753c94;
+    }
+  }
+
+  &.btn-no-hover {
+    &:hover {
+      border: 1px solid #000000;
+      color: #000000;
+      box-shadow: unset !important;
+    }
+  }
+
+  &.btn-axis {
+    background-color: #00d9b5;
+    border: none;
+
+    &:hover {
+      background-color: #05f2cb;
+    }
+  }
+
+  &.btn-rounded {
+    border-radius: 22px;
+  }
+
+  &.loading {
+    pointer-events: none;
+    background-color: #d1d5db;
+
+    .el-loader {
+      animation: fadeIn 0.2s linear;
+
+      &:before {
+        opacity: 0.4;
+        z-index: 1;
+        font-size: 1rem;
+      }
+
+      &:after {
+        animation: spin 2s infinite linear;
+        z-index: 2;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background-color: #e2e2e2;
+  }
+}

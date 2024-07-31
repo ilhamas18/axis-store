@@ -1,0 +1,181 @@
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+// FONTS
+@font-face {
+  font-family: "Museo-Light";
+  src: url("../fonts/Texta/TextaLight.ttf");
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url("../fonts/Texta/TextaRegular.ttf");
+}
+
+@font-face {
+  font-family: "Museo-Medium";
+  src: url("../fonts/Texta/TextaBold.ttf");
+}
+
+@font-face {
+  font-family: "Museo-Bold";
+  src: url("../fonts/Texta/TextaHeavy.ttf");
+}
+
+// VARIABLES
+@import "./variables/color";
+@import "./variables/transitions";
+
+// BASE
+@import "./base/animation";
+@import "./base/alert";
+
+// TEMPLATES
+@import url("../../components/templates/button/_button.scss");
+@import url("../../components/templates/text-input/_input.scss");
+@import url("../../components/templates/common-modal/_half-modal.scss");
+@import url("../../components/templates/common-modal/_modal.scss");
+@import url("../../components/templates/switch-button/_switch-button.scss");
+
+// TAILWIND COMPONENT
+@import "./tailwind/list";
+@import "./tailwind/shadow";
+@import "./tailwind/card";
+
+// GLOBAL
+@import url("../../components/global/step-page/_progressbar.scss");
+@import url("../../components/global/delivery-step/__progressStep.scss");
+
+body {
+  background-color: #eee;
+}
+
+body:not(.modal-open) {
+  padding-right: 0px !important;
+}
+
+.slick-dots {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 40vw !important;
+}
+
+@media (max-width: 700px) {
+  .slick-dots {
+    position: absolute !important;
+    bottom: 50px !important;
+    left: 25vw !important;
+  }
+}
+
+.slick-dots li {
+  position: relative !important;
+  display: inline-block !important;
+  width: 20px !important;
+  height: 6px !important;
+  margin: 0 5px !important;
+  border-radius: 10px;
+  cursor: pointer !important;
+  transition: width 0.3s ease-in-out !important;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.slick-dots li.slick-active {
+  opacity: 0.75 !important;
+  width: 30px !important;
+  color: black !important;
+  background-color: #fff !important;
+}
+
+.slick-dots li button::before {
+  font-size: 0 !important;
+  line-height: 0 !important;
+  display: block !important;
+  width: 20px !important;
+  height: 10px !important;
+  padding: 0px !important;
+  cursor: pointer !important;
+  color: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.slick-slide {
+  visibility: hidden !important;
+}
+
+.slick-slide.slick-active {
+  visibility: visible !important;
+}
+
+.card-pilih {
+  border-top: 1px solid #0000000c;
+}
+
+.notification-wrapper-pengiriman {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: end;
+  }
+
+  .content {
+    background: #ffffffbd;
+    border: 2px solid #00d9b5;
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin: 0 0.8rem 0.8rem 0.8rem;
+
+    @media (min-width: 768px) {
+      width: 363px;
+    }
+
+    .box {
+      align-items: center;
+    }
+
+    .img-box {
+      width: 47px;
+      margin-right: 0.8rem;
+
+      @media (max-width: 768px) {
+        width: 37px;
+      }
+    }
+
+    .des {
+      color: #686868;
+
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+
+    .title {
+      color: #6e2c91;
+      font-size: 18px;
+      text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+.react-multi-carousel-dot-list {
+  left: 50% !important;
+  bottom: 19px !important;
+  @media (max-width: 768px) {
+    width: 100%;
+    left: unset !important;
+    bottom: 20px !important;
+  }
+}

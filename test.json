@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "data": {
+        "code": "00",
+        "status": "ok",
+        "message": "Success",
+        "data": {
+            "va": "2081783898774541",
+            "expiredAt": "2023-12-14T07:50:32.000Z",
+            "bankCode": "BCA",
+            "status": "ACTIVE",
+            "createdAt": "2023-12-14T14:20:32.421+0700",
+            "touchpoint": "AXISWEBSTORE",
+            "transactionId": null,
+            "expectedAmount": 60000
+        }
+    }
+}

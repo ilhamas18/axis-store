@@ -1,0 +1,50 @@
+.progressStep-wrapper {
+  .progressStep {
+    position: relative;
+    list-style: none;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 17px;
+      width: 8px;
+      height: calc(100% - 20px);
+      border-left: 1.5px solid #002DBB;
+    }
+
+    &__item {
+      position: relative;
+      counter-increment: list;
+      padding-left: 0.5rem;
+     
+      &.after {
+        font-weight: normal;
+        color: #D1D5DB
+      }
+
+      &.canClick {
+        color: #002DBB;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 2rem;
+      }
+
+      &::before {
+        display: inline-block;
+        content: "";
+        position: absolute;
+        left: -24px;
+        height: 100%;
+        width: 8px;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.steps-wrapper {
+  top: 7.25rem;
+}

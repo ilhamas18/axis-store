@@ -1,0 +1,379 @@
+.modal-backdrop {
+  position: fixed;
+  overflow: hidden;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  vertical-align: middle;
+}
+
+.modal-content-wrapper {
+  max-height: fit-content;
+  background: white;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  height: -moz-max-content;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  display: flex;
+  padding: 30px;
+  border-radius: 10px;
+  align-content: center;
+  max-width: 92vw;
+  padding-bottom: 20px;
+}
+
+.MuiModal-root {
+  &.bottom-sheet {
+    .modal-content-wrapper {
+      width: auto;
+      max-width: 36rem;
+      min-width: 50vw;
+      top: auto;
+      border-radius: 10px 10px 0 0;
+      height: calc(100vh - 250px);
+      overflow-y: unset;
+      overflow-x: unset;
+      padding: 1rem;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .modal-content {
+        position: relative;
+
+        .wrapper-content {
+          height: calc(100vh - 407px);
+
+          &.scroll-content {
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+              background: transparent;
+              width: 0px;
+            }
+          }
+        }
+
+        .icon-close {
+          color: transparent;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
+    &.wrapper-pilih {
+      .modal-content-wrapper {
+        height: 565px;
+        max-height: 100vh;
+
+        @media (min-width: 768px) {
+          height: min-content;
+          border-radius: 10px;
+          top: 0;
+          max-width: 420px;
+          min-width: unset;
+        }
+
+        .modal-content {
+          height: unset;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .wrapper-content {
+            height: 100%;
+            overflow: auto;
+          }
+        }
+      }
+    }
+
+    &.wrapper-esim-info {
+      .modal-content-wrapper {
+        height: 100%;
+        border-radius: 0;
+
+        .modal-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .wrapper-content {
+            height: 97%;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    &.wrapper-pilih-delivery {
+      .modal-content-wrapper {
+        height: 407px;
+
+        @media (min-width: 768px) {
+          height: unset;
+          border-radius: 10px;
+          top: 0;
+          max-width: 420px;
+          min-width: unset;
+        }
+
+        .modal-content {
+          height: unset;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .wrapper-content {
+            height: unset;
+          }
+        }
+      }
+    }
+
+    &.wrapper-delivery {
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px transparent;
+        border-radius: 10px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 10px;
+      }
+
+      .modal-content-wrapper {
+        width: auto;
+        max-width: 36rem;
+        min-width: 50vw;
+        top: auto;
+        border-radius: 12px 12px 0 0;
+        height: auto;
+        overflow-y: unset;
+        overflow-x: unset;
+        padding: 1rem;
+        max-height: 60%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @media (min-width: 768px) {
+          border-radius: 10px;
+          top: 0;
+          max-width: 420px;
+          min-width: unset;
+          max-height: 518px;
+        }
+
+        .modal-content {
+          height: unset;
+        }
+
+        .wrapper-content {
+          padding-bottom: 0.4rem;
+          height: unset;
+        }
+      }
+
+      &.wrapper-delivery-auto {
+        .modal-content-wrapper {
+          @media (min-width: 768px) {
+            max-height: 407px;
+          }
+        }
+      }
+    }
+
+    &.wrapper-filter-esim {
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px transparent;
+        border-radius: 10px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 10px;
+      }
+
+      .modal-content-wrapper {
+        width: auto;
+        max-width: 36rem;
+        min-width: 50vw;
+        top: auto;
+        border-radius: 12px 12px 0 0;
+        height: auto;
+        overflow-y: unset;
+        overflow-x: unset;
+        padding: 1rem;
+        max-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @media (min-width: 768px) {
+          border-radius: 10px;
+          top: 0;
+          max-width: 420px;
+          min-width: unset;
+          height: fit-content;
+        }
+
+        .modal-content {
+          height: unset;
+        }
+
+        .wrapper-content {
+          padding-bottom: 0.4rem;
+          height: unset;
+        }
+      }
+    }
+
+    &.wrapper-pilih-courier {
+      .modal-content-wrapper {
+        height: 330px;
+
+        @media (min-width: 768px) {
+          height: unset;
+        }
+
+        .modal-content {
+          height: unset;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .wrapper-content {
+            height: unset;
+          }
+        }
+      }
+
+      .modal-content {
+        justify-content: unset !important;
+
+        .css-hyxlzm {
+          margin-right: -0.7rem;
+        }
+      }
+    }
+
+    &.wrapper-package-detail {
+      .modal-content-wrapper {
+        height: auto;
+
+        @media (min-width: 768px) {
+          height: auto;
+        }
+
+        .modal-content {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .wrapper-content {
+            height: auto;
+          }
+        }
+      }
+
+      .modal-content {
+        justify-content: unset !important;
+
+        .css-hyxlzm {
+          margin-right: -0.7rem;
+        }
+      }
+    }
+
+    &.wrapper-device-detail {
+      .modal-content-wrapper {
+        max-height: 70%;
+
+        @media (min-width: 768px) {
+          height: unset;
+        }
+
+        .modal-content {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .wrapper-content {
+            height: auto;
+          }
+        }
+      }
+
+      .modal-content {
+        justify-content: unset !important;
+
+        .css-hyxlzm {
+          margin-right: -0.7rem;
+        }
+      }
+    }
+
+    &.wrapper-notif {
+      &>div {
+        background-color: transparent;
+      }
+
+      .modal-content-wrapper {
+        background: transparent;
+        height: unset;
+
+        .modal-content {
+          background: #ffffffbd;
+          border: 2px solid #00d9b5;
+          padding: 0.8rem;
+          border-radius: 10px;
+
+          .box {
+            align-items: center;
+          }
+
+          .img-box {
+            width: 47px;
+            margin-right: 0.8rem;
+          }
+
+          .des {
+            color: #686868;
+          }
+
+          .title {
+            color: #6e2c91;
+            font-size: 18px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

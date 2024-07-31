@@ -1,0 +1,272 @@
+.animated {
+  animation-duration: $anim-duration;
+  animation-fill-mode: both;
+}
+.infinite {
+  animation-iteration-count: infinite;
+}
+.is-in-view {
+  opacity: 1;
+}
+
+// Scroll In Animations
+$animations-in: "fadeIn", "fadeInUp", "fadeInRight", "fadeInDown", "fadeInLeft",
+  "slideInUp", "slideInRight", "slideInDown", "slideInLeft", "zoomIn",
+  "zoomInSm", "revealInUp", "revealInRight", "revealInDown", "revealInLeft",
+  "revealBlockInUp", "revealBlockInRight", "revealBlockInDown",
+  "revealBlockInLeft";
+@each $animation in $animations-in {
+  .scroll-#{$animation} {
+    opacity: 0;
+  }
+  .#{$animation} {
+    opacity: 1;
+    animation-duration: $anim-duration;
+    animation-fill-mode: both;
+  }
+}
+
+// Scroll Out Animations
+$animations-out: "fadeOut", "fadeOutUp", "fadeOutRight", "fadeOutDown",
+  "fadeOutLeft", "slideOutUp", "slideOutRight", "slideOutDown", "slideOutLeft",
+  "zoomOut", "zoomOutSm";
+@each $animation in $animations-out {
+  .scroll-#{$animation} {
+    opacity: 1;
+  }
+  .#{$animation} {
+    opacity: 0;
+    animation-duration: $anim-duration;
+    animation-fill-mode: both;
+  }
+}
+
+// Delays
+@for $i from 1 through 40 {
+  .d#{$i},
+  .delayp#{$i} {
+    animation-delay: 0s + $i * 0.1;
+    transition-delay: 0s + $i * 0.1;
+  }
+}
+
+// ==========================================================================
+// Basic Animations
+// ==========================================================================
+
+// fadeIn, fadeInUp, fadeInRight, fadeInDown, fadeInLeft
+// fadeOut, fadeOutUp, fadeOutRight, fadeOutDown, fadeOutLeft
+// slideInUp, slideInRight, slideInDown, slideInLeft
+// slideOutUp, slideOutRight, slideOutDown, slideOutLeft
+// revealInUp, revealInRight
+// revealBlockInUp, revealBlockInRight
+
+//
+// Fade
+//
+
+// prettier-ignore
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+// prettier-ignore
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+// prettier-ignore
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+// prettier-ignore
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+// prettier-ignore
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+// prettier-ignore
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+// prettier-ignore
+@keyframes fadeOutUp {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translateY(10px); }
+}
+.fadeOutUp {
+  animation-name: fadeOutUp;
+}
+
+// prettier-ignore
+@keyframes fadeOutRight {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translateX(10px); }
+}
+.fadeOutRight {
+  animation-name: fadeOutRight;
+}
+
+// prettier-ignore
+@keyframes fadeOutDown {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+// prettier-ignore
+@keyframes fadeOutLeft {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translateX(-10px); }
+}
+.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+//
+// Slide
+//
+
+// prettier-ignore
+@keyframes slideInUp {
+  from { transform: translate3d(0, 100%, 0); visibility: visible; }
+  to { transform: translate3d(0, 0, 0); }
+}
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+// prettier-ignore
+@keyframes slideInRight {
+  from { transform: translate3d(100%, 0, 0); visibility: visible; }
+  to { transform: translate3d(0, 0, 0); }
+}
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+// prettier-ignore
+@keyframes slideInDown {
+  from { transform: translate3d(0, -100%, 0); visibility: visible; }
+  to { transform: translate3d(0, 0, 0); }
+}
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+// prettier-ignore
+@keyframes slideInLeft {
+  from { transform: translate3d(-100%, 0, 0); visibility: visible; }
+  to { transform: translate3d(0, 0, 0); }
+}
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+// prettier-ignore
+@keyframes slideOutUp {
+  from { transform: translate3d(0, 0, 0); }
+  to { visibility: hidden; transform: translate3d(0, -100%, 0); }
+}
+.slideOutUp {
+  animation-name: slideOutUp;
+}
+
+// prettier-ignore
+@keyframes slideOutRight {
+  from { transform: translate3d(0, 0, 0); }
+  to { visibility: hidden; transform: translate3d(100%, 0, 0); }
+}
+.slideOutRight {
+  animation-name: slideOutRight;
+}
+
+// prettier-ignore
+@keyframes slideOutDown {
+  from { transform: translate3d(0, 0, 0); }
+  to { visibility: hidden; transform: translate3d(0, 100%, 0); }
+}
+.slideOutDown {
+  animation-name: slideOutDown;
+}
+
+// prettier-ignore
+@keyframes slideOutLeft {
+  from { transform: translate3d(0, 0, 0); }
+  to { visibility: hidden; transform: translate3d(-100%, 0, 0); }
+}
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+//
+// Zoom
+//
+
+// prettier-ignore
+@keyframes zoomIn {
+  from { transform: scale(1.6); }
+  to { transform: scale(1); }
+}
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+// prettier-ignore
+@keyframes zoomOut {
+  from { transform: scale(1); }
+  to { transform: scale(1.6); }
+}
+.zoomOutSm {
+  animation-name: zoomOut;
+}
+
+// prettier-ignore
+@keyframes zoomInSm {
+  from { transform: scale(1.2); }
+  to { transform: scale(1); }
+}
+.zoomInSm {
+  animation-name: zoomInSm;
+}
+
+// prettier-ignore
+@keyframes zoomOutSm {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+.zoomOutSm {
+  animation-name: zoomOutSm;
+}

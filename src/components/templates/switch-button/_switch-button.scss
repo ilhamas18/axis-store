@@ -1,0 +1,27 @@
+.tabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 250px;
+  background: #f5f5f5;
+  padding: 20px 30px;
+  border-radius: 50%;
+  box-shadow: 5px 10px 5px #ccc;
+
+  .tab-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .active {
+      width: calc(100% / 2);
+      text-align: center;
+      color: #888;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}
